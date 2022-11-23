@@ -3,6 +3,8 @@ from subprocess import *
 import time
 from oskextention import *
 
+os.system('cls')
+
 kosnum = 12
 num1fw = 1
 opennum = 6
@@ -26,7 +28,8 @@ while True:
                 open - opens a file/app
                 createFile - creates file with .osk extention
                 readFile - reads the .osk file
-                writeFile - writes in the .osk file""")
+                writeFile - writes in the .osk file
+                clear - clear terminal""")
             else:
                 if "open" in Q:
                     loopon2 = True
@@ -78,3 +81,8 @@ while True:
                                 namet = Q[keepwr:wrnum]
                                 namew = namew.replace('(', '')
                                 writefile(namew,namet)
+                            else:
+                                if Q == "clear":
+                                    os.system('cls')
+                                else:
+                                    print("Syantax error!")

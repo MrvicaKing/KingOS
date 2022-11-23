@@ -1,6 +1,7 @@
 from importlib.resources import contents
 from subprocess import call
 import os
+import time
 
 print("""
 ██╗░░██╗██╗███╗░░██╗░██████╗░░░░░░░░█████╗░░██████╗
@@ -22,6 +23,7 @@ if doesFileExists('./Password.txt'):
         contents = f.read()
     if contents == PasswordCheck:
         print("Password is correct")
+        time.sleep(1)
         call(["python", "home.py"])
 else:
     nme = input("New Password: ")
