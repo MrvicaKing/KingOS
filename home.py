@@ -13,7 +13,7 @@ wrnum = 11
 
 
 while True:
-    Q = input("")
+    Q = input("> ")
     if Q == "shutdown":
             quit()
     else:
